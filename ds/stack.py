@@ -15,10 +15,8 @@ class Stack:
         if len(self.stack) == 0:
             return None
         else:
-            return self.stack[-1]
+            return self.stack[len(self.stack)-1]
     
     def size(self):
         return len(self.stack)
-
-
 
