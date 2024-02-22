@@ -28,4 +28,11 @@ class LinkedList:
         return " -> ".join(nodes)
 
     def add_to_tail(self, node):
-        self.head = node
+        if self.head == None:
+            self.head = node
+            return
+        last_node = None
+        for current_node in self:
+            last_node = current_node
+        last_node.set_next(node)
+
