@@ -36,3 +36,9 @@ class LinkedList:
             last_node = current_node
         last_node.set_next(node)
 
+    def add_to_head(self, node):
+        if self.head is None:
+            sefl.head = node
+            return
+        node.set_next(self.head)
+        self.head = node
